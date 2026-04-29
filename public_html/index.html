@@ -273,58 +273,6 @@
         transform: translateY(3px);
       }
 
-      .ebook {
-        margin-top: 22px;
-        display: grid;
-        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-        gap: 16px;
-        overflow: hidden;
-      }
-
-      .ebook-cover {
-        margin: 0;
-        min-height: 100%;
-      }
-
-      .ebook-cover img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        border-radius: var(--radius-md);
-      }
-
-      .ebook-content {
-        padding: clamp(20px, 2.2vw, 28px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .ebook-title {
-        margin: 0;
-        font-family: "Bebas Neue", sans-serif;
-        letter-spacing: 0.05em;
-        font-size: clamp(2rem, 2.5vw, 2.8rem);
-        line-height: 0.98;
-      }
-
-      .ebook-subtitle {
-        margin: 8px 0 14px;
-        color: #ffd483;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        font-size: 0.82rem;
-      }
-
-      .ebook-description {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.65;
-        font-size: 0.92rem;
-      }
-
       .cards {
         margin-top: 22px;
         padding: clamp(18px, 2.2vw, 26px);
@@ -419,15 +367,6 @@
 
         .portrait {
           max-width: 390px;
-        }
-
-        .ebook {
-          grid-template-columns: 1fr;
-        }
-
-        .ebook-cover {
-          max-height: 420px;
-          overflow: hidden;
         }
 
         .card-grid {
@@ -532,7 +471,6 @@
             </div>
           </details>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#ebook">Ver Ebook</a>
             <a
               class="btn btn-secondary"
               href="https://wa.me/5548999215120?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20ebook."
@@ -554,30 +492,6 @@
             fetchpriority="high"
           />
         </aside>
-      </section>
-
-      <section id="ebook" class="panel ebook reveal reveal-3">
-        <figure class="ebook-cover">
-          <img
-            src="/ebook/images/book-cover.jpg"
-            alt="Capa do ebook Desperta, Igreja! 40 Dias de Propósito e Missão"
-            width="768"
-            height="1152"
-            loading="lazy"
-          />
-        </figure>
-        <div class="ebook-content">
-          <p class="kicker">Ebook em destaque</p>
-          <h3 class="ebook-title">Desperta, Igreja!</h3>
-          <p class="ebook-subtitle">40 Dias de Propósito e Missão</p>
-          <p class="ebook-description">
-            Um convite para viver a fé com intencionalidade e missão. Acesse a página completa do
-            ebook para conhecer detalhes e garantir seu exemplar.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="/ebook/">Acessar Página do Ebook</a>
-          </div>
-        </div>
       </section>
 
       <section id="cards" class="panel cards reveal reveal-3">
