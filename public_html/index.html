@@ -351,9 +351,7 @@
       }
 
       .link-card {
-        display: grid;
-        grid-template-columns: minmax(190px, 52%) minmax(0, 1fr);
-        align-items: stretch;
+        display: block;
         text-decoration: none;
         border: 1px solid var(--line);
         border-radius: 14px;
@@ -361,7 +359,6 @@
         background: rgba(255, 255, 255, 0.02);
         transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
         min-width: 0;
-        min-height: 118px;
       }
 
       .link-card:hover {
@@ -372,22 +369,13 @@
 
       .link-card img {
         width: 100%;
-        height: 100%;
-        aspect-ratio: auto;
+        height: auto;
+        aspect-ratio: 16 / 9;
         object-fit: contain;
         object-position: center;
         display: block;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15));
-        padding: 6px;
-      }
-
-      .link-card-title {
-        display: flex;
-        align-items: center;
-        padding: 10px 12px;
-        color: #f7f7f7;
-        font-size: 0.84rem;
-        line-height: 1.3;
+        padding: 5px;
       }
 
       footer {
@@ -445,21 +433,11 @@
         .card-grid {
           grid-template-columns: 1fr;
         }
-
-        .link-card {
-          grid-template-columns: minmax(170px, 48%) minmax(0, 1fr);
-        }
       }
 
       @media (max-width: 640px) {
-        .link-card {
-          grid-template-columns: minmax(145px, 45%) minmax(0, 1fr);
-          min-height: 104px;
-        }
-
-        .link-card-title {
-          font-size: 0.8rem;
-          padding: 9px 10px;
+        .link-card img {
+          padding: 4px;
         }
       }
 
@@ -611,42 +589,34 @@
         <div class="card-grid">
           <a class="link-card" href="https://atitudeinvest.com/" target="_blank" rel="noopener noreferrer">
             <img src="/images/3.png" alt="Card Atitude Invest" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Atitude Invest • Finanças e investimentos</span>
           </a>
 
           <a class="link-card" href="/ebook/">
             <img src="/images/6.png" alt="Card Livro Desperta, Igreja!" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Livro • Desperta, Igreja!</span>
           </a>
 
           <a class="link-card" href="https://www.filipeivopereira.com/livro" target="_blank" rel="noopener noreferrer">
             <img src="/images/9.png" alt="Card Livro Desendivide-se" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Livro • Desendivide-se</span>
           </a>
 
           <a class="link-card" href="https://clubedeautores.com.br/livro/face-a-face-com-jesus" target="_blank" rel="noopener noreferrer">
             <img src="/images/7.png" alt="Card Face a Face com Jesus" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Livro • Face a Face com Jesus</span>
           </a>
 
           <a class="link-card" href="https://www.amazon.com.br/Remove-Montanhas-Filipe-Ivo-Pereira/dp/6500606515/ref=sr_1_2" target="_blank" rel="noopener noreferrer">
             <img src="/images/4.png" alt="Card Livro A Fé Remove Montanhas" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Livro • A Fé Remove Montanhas</span>
           </a>
 
           <a class="link-card" href="https://www.amazon.com.br/Clube-Autores-Livro-Encoraje-Seu/dp/6560366340/ref=sr_1_1" target="_blank" rel="noopener noreferrer">
             <img src="/images/5.png" alt="Card Livro Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Livro • Encoraje Seu Dia</span>
           </a>
 
           <a class="link-card" href="https://open.spotify.com/show/3pqR4I4E8bRlxBKCQsgHRe?si=396976242c534152" target="_blank" rel="noopener noreferrer">
             <img src="/images/2.png" alt="Card Spotify Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">Spotify • Encoraje Seu Dia</span>
           </a>
 
           <a class="link-card" href="https://www.youtube.com/playlist?list=PL8TZC9PmmYq5_4UGM_guQm-SSXHFNwLfj" target="_blank" rel="noopener noreferrer">
             <img src="/images/1.png" alt="Card YouTube Mensagens que Encorajam e Transformam" loading="lazy" width="1920" height="1080" />
-            <span class="link-card-title">YouTube • Mensagens que Encorajam e Transformam</span>
           </a>
         </div>
       </section>
