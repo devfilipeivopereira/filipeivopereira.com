@@ -1,0 +1,16 @@
+/*
+!/.vercelignore
+!/vercel.json
+
+!/public_html
+/public_html/*
+!/public_html/index.html
+!/public_html/favicon.ico
+!/public_html/robots.txt
+
+!/public_html/images
+/public_html/images/*
+!/public_html/images/8b.png
+
+!/public_html/ebook
+!/public_html/ebook/**

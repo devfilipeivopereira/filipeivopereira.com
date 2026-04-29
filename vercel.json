@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/public_html/index.html"
+    },
+    {
+      "source": "/ebook",
+      "destination": "/public_html/ebook/index.html"
+    },
+    {
+      "source": "/ebook/",
+      "destination": "/public_html/ebook/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public_html/$1"
+    }
+  ]
+}
