@@ -156,11 +156,51 @@
       }
 
       .description {
-        margin: 18px 0 26px;
+        margin: 18px 0 14px;
         color: var(--muted);
         line-height: 1.7;
         font-size: 0.95rem;
         max-width: 52ch;
+      }
+
+      .bio-expand {
+        margin: 0 0 26px;
+        border: 1px dashed var(--line);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .bio-expand summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .bio-expand summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .bio-expand summary::after {
+        content: "+";
+        float: right;
+        color: var(--accent);
+      }
+
+      .bio-expand[open] summary::after {
+        content: "-";
+      }
+
+      .bio-full {
+        padding: 0 16px 16px;
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 0.92rem;
+      }
+
+      .bio-full p {
+        margin: 0 0 12px;
       }
 
       .cta-row {
@@ -285,6 +325,61 @@
         font-size: 0.92rem;
       }
 
+      .cards {
+        margin-top: 22px;
+        padding: clamp(18px, 2.2vw, 26px);
+      }
+
+      .cards-heading {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.06em;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+      }
+
+      .cards-subtitle {
+        margin: 4px 0 16px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .link-card {
+        display: block;
+        text-decoration: none;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+      }
+
+      .link-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 183, 3, 0.7);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .link-card img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        display: block;
+      }
+
+      .link-card-title {
+        display: block;
+        padding: 10px 12px 12px;
+        color: #f7f7f7;
+        font-size: 0.84rem;
+        line-height: 1.35;
+      }
+
       footer {
         padding: 20px 0 28px;
       }
@@ -335,6 +430,10 @@
         .ebook-cover {
           max-height: 420px;
           overflow: hidden;
+        }
+
+        .card-grid {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -398,6 +497,36 @@
             produção de conteúdo com foco em fé prática, liderança e transformação de vidas. Nesta
             página você encontra sua apresentação e o acesso direto ao ebook oficial.
           </p>
+          <details class="bio-expand">
+            <summary>Ler biografia completa</summary>
+            <div class="bio-full">
+              <p>
+                Além de pastor e escritor, Filipe também atua na área de finanças e investimentos.
+                É autor do blog Atitude Invest, com conteúdo voltado a investidores e educação
+                financeira.
+              </p>
+              <p>
+                Sua formação inclui MBA em Gestão de Investimentos e Criptomoedas, graduação em
+                Administração com habilitação em Marketing, mestrado em Administração (ESAG/UDESC),
+                além de bacharelados em Ciências Contábeis e Teologia.
+              </p>
+              <p>
+                Tem pós-graduações em áreas como Ciência de Dados e Inteligência Artificial,
+                Engenharia de Dados, Business Intelligence, Big Data, Analytics e Engenharia de
+                Software.
+              </p>
+              <p>
+                Desde 2009, atua como pastor na Igreja da Família Cristã, em São José (SC), e é
+                ordenado pela Convenção Brasileira das Igrejas Irmãos Menonitas (COBIM). Também
+                atua como docente em cursos ligados a liderança, gestão e espiritualidade cristã.
+              </p>
+              <p>
+                É autor dos livros A Fé Remove Montanhas, Encoraje Seu Dia, Face a Face com Jesus e
+                Desperta, Igreja! 40 Dias de Missão e Propósito. Casado com Renata, é pai de Daniel
+                e Amanda.
+              </p>
+            </div>
+          </details>
           <div class="cta-row">
             <a class="btn btn-primary" href="#ebook">Ver Ebook</a>
             <a
@@ -444,6 +573,55 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="/ebook/">Acessar Página do Ebook</a>
           </div>
+        </div>
+      </section>
+
+      <section id="cards" class="panel cards reveal reveal-3">
+        <p class="kicker">Cards Oficiais</p>
+        <h3 class="cards-heading">Conteúdos e Livros</h3>
+        <p class="cards-subtitle">
+          Seleção dos mesmos cards utilizados no site oficial para acesso rápido.
+        </p>
+        <div class="card-grid">
+          <a class="link-card" href="https://atitudeinvest.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/images/3.png" alt="Card Atitude Invest" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Atitude Invest • Finanças e investimentos</span>
+          </a>
+
+          <a class="link-card" href="/ebook/">
+            <img src="/images/6.png" alt="Card Livro Desperta, Igreja!" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Livro • Desperta, Igreja!</span>
+          </a>
+
+          <a class="link-card" href="https://www.filipeivopereira.com/livro" target="_blank" rel="noopener noreferrer">
+            <img src="/images/9.png" alt="Card Livro Desendivide-se" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Livro • Desendivide-se</span>
+          </a>
+
+          <a class="link-card" href="https://clubedeautores.com.br/livro/face-a-face-com-jesus" target="_blank" rel="noopener noreferrer">
+            <img src="/images/7.png" alt="Card Face a Face com Jesus" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Livro • Face a Face com Jesus</span>
+          </a>
+
+          <a class="link-card" href="https://www.amazon.com.br/Remove-Montanhas-Filipe-Ivo-Pereira/dp/6500606515/ref=sr_1_2" target="_blank" rel="noopener noreferrer">
+            <img src="/images/4.png" alt="Card Livro A Fé Remove Montanhas" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Livro • A Fé Remove Montanhas</span>
+          </a>
+
+          <a class="link-card" href="https://www.amazon.com.br/Clube-Autores-Livro-Encoraje-Seu/dp/6560366340/ref=sr_1_1" target="_blank" rel="noopener noreferrer">
+            <img src="/images/5.png" alt="Card Livro Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Livro • Encoraje Seu Dia</span>
+          </a>
+
+          <a class="link-card" href="https://open.spotify.com/show/3pqR4I4E8bRlxBKCQsgHRe?si=396976242c534152" target="_blank" rel="noopener noreferrer">
+            <img src="/images/2.png" alt="Card Spotify Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">Spotify • Encoraje Seu Dia</span>
+          </a>
+
+          <a class="link-card" href="https://www.youtube.com/playlist?list=PL8TZC9PmmYq5_4UGM_guQm-SSXHFNwLfj" target="_blank" rel="noopener noreferrer">
+            <img src="/images/1.png" alt="Card YouTube Mensagens que Encorajam e Transformam" loading="lazy" width="1920" height="1080" />
+            <span class="link-card-title">YouTube • Mensagens que Encorajam e Transformam</span>
+          </a>
         </div>
       </section>
     </main>

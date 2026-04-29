@@ -9,8 +9,7 @@
 !/public_html/robots.txt
 
 !/public_html/images
-/public_html/images/*
-!/public_html/images/8b.png
+!/public_html/images/*
 
 !/public_html/ebook
 !/public_html/ebook/**
