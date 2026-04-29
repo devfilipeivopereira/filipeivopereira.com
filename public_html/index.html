@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filipe Ivo Pereira | Apresentação e Ebook</title>
+    <meta
+      name="description"
+      content="Pastor, professor, escritor e palestrante. Conheça o trabalho de Filipe Ivo Pereira e acesse o ebook Desperta, Igreja!"
+    />
+    <meta name="author" content="Filipe Ivo Pereira" />
+    <meta property="og:title" content="Filipe Ivo Pereira" />
+    <meta
+      property="og:description"
+      content="Apresentação oficial e acesso ao ebook Desperta, Igreja!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.filipeivopereira.com/images/8b.png" />
+    <meta property="og:url" content="https://www.filipeivopereira.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Filipe Ivo Pereira" />
+    <meta
+      name="twitter:description"
+      content="Apresentação oficial e acesso ao ebook Desperta, Igreja!"
+    />
+    <meta name="twitter:image" content="https://www.filipeivopereira.com/images/8b.png" />
+    <link rel="icon" type="image/png" href="/images/8b.png" />
+    <link rel="preload" href="/images/8b.png" as="image" type="image/png" fetchpriority="high" />
+    <link rel="preload" href="/ebook/images/book-cover.jpg" as="image" type="image/jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070909;
+        --bg-soft: #121b1c;
+        --text: #f4f4f4;
+        --muted: #bdc7c7;
+        --accent: #ffb703;
+        --accent-deep: #fb8500;
+        --line: rgba(255, 255, 255, 0.15);
+        --card: rgba(9, 16, 18, 0.8);
+        --radius-lg: 28px;
+        --radius-md: 18px;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: "Sora", sans-serif;
+        background:
+          radial-gradient(circle at 12% 10%, rgba(255, 183, 3, 0.16), transparent 38%),
+          radial-gradient(circle at 90% 0%, rgba(251, 133, 0, 0.18), transparent 32%),
+          linear-gradient(150deg, #040505 0%, #0b1315 55%, #060707 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.8px, transparent 0.8px);
+        background-size: 3px 3px;
+        opacity: 0.08;
+        pointer-events: none;
+      }
+
+      .container {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 26px 0 14px;
+      }
+
+      .brand {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.9rem, 1.5vw + 1.4rem, 2.5rem);
+        letter-spacing: 0.07em;
+      }
+
+      .topline {
+        display: inline-flex;
+        margin-top: 6px;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      main {
+        padding-bottom: 48px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 22px;
+        align-items: stretch;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        background: var(--card);
+        backdrop-filter: blur(8px);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+      }
+
+      .bio {
+        padding: clamp(24px, 3vw, 42px);
+      }
+
+      .kicker {
+        margin: 0 0 8px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .title {
+        margin: 0;
+        line-height: 0.95;
+        letter-spacing: 0.015em;
+        font-size: clamp(2.4rem, 4.5vw, 4.6rem);
+      }
+
+      .title span {
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.08em;
+      }
+
+      .role {
+        margin-top: 14px;
+        color: #ffe8a9;
+        font-size: clamp(1rem, 1vw + 0.7rem, 1.3rem);
+        font-weight: 500;
+      }
+
+      .description {
+        margin: 18px 0 26px;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 0.95rem;
+        max-width: 52ch;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      .btn-primary {
+        padding: 13px 20px;
+        background: linear-gradient(115deg, var(--accent), var(--accent-deep));
+        color: #101112;
+        box-shadow: 0 10px 24px rgba(255, 183, 3, 0.28);
+      }
+
+      .btn-secondary {
+        padding: 12px 20px;
+        color: #fff;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .portrait-wrap {
+        position: relative;
+        overflow: hidden;
+        padding: 26px;
+        isolation: isolate;
+      }
+
+      .portrait-wrap::before {
+        content: "";
+        position: absolute;
+        inset: auto -12% -28% -12%;
+        height: 58%;
+        border-radius: 999px;
+        background: linear-gradient(95deg, #ffb703 0%, #fb8500 80%);
+        filter: blur(0.5px);
+        z-index: 0;
+        opacity: 0.88;
+      }
+
+      .portrait {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 460px;
+        display: block;
+        margin: 4px auto 0;
+        height: auto;
+        transform: translateY(3px);
+      }
+
+      .ebook {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+        gap: 16px;
+        overflow: hidden;
+      }
+
+      .ebook-cover {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      .ebook-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: var(--radius-md);
+      }
+
+      .ebook-content {
+        padding: clamp(20px, 2.2vw, 28px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .ebook-title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.05em;
+        font-size: clamp(2rem, 2.5vw, 2.8rem);
+        line-height: 0.98;
+      }
+
+      .ebook-subtitle {
+        margin: 8px 0 14px;
+        color: #ffd483;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-size: 0.82rem;
+      }
+
+      .ebook-description {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 0.92rem;
+      }
+
+      footer {
+        padding: 20px 0 28px;
+      }
+
+      .footnote {
+        margin: 0;
+        color: #afafaf;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        animation: reveal 760ms ease forwards;
+      }
+
+      .reveal-2 {
+        animation-delay: 120ms;
+      }
+
+      .reveal-3 {
+        animation-delay: 240ms;
+      }
+
+      @keyframes reveal {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .portrait {
+          max-width: 390px;
+        }
+
+        .ebook {
+          grid-template-columns: 1fr;
+        }
+
+        .ebook-cover {
+          max-height: 420px;
+          overflow: hidden;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .container {
+          width: min(1080px, calc(100% - 20px));
+        }
+
+        .title {
+          font-size: clamp(2rem, 11vw, 2.8rem);
+        }
+
+        .role {
+          margin-top: 10px;
+        }
+
+        .description {
+          font-size: 0.9rem;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .portrait-wrap {
+          padding: 20px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="brand">Filipe Ivo Pereira</h1>
+      <div class="topline">Apresentação Oficial</div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <article class="panel bio reveal">
+          <p class="kicker">Quem é Filipe Ivo Pereira</p>
+          <h2 class="title"><span>Filipe Ivo Pereira</span></h2>
+          <p class="role">Pastor, Professor, Escritor e Palestrante</p>
+          <p class="description">
+            Natural de Florianópolis (SC), Filipe atua no ministério pastoral, no ensino e na
+            produção de conteúdo com foco em fé prática, liderança e transformação de vidas. Nesta
+            página você encontra sua apresentação e o acesso direto ao ebook oficial.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#ebook">Ver Ebook</a>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/5548999215120?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20ebook."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <aside class="panel portrait-wrap reveal reveal-2">
+          <img
+            class="portrait"
+            src="/images/8b.png"
+            alt="Retrato de Filipe Ivo Pereira"
+            width="2048"
+            height="2048"
+            fetchpriority="high"
+          />
+        </aside>
+      </section>
+
+      <section id="ebook" class="panel ebook reveal reveal-3">
+        <figure class="ebook-cover">
+          <img
+            src="/ebook/images/book-cover.jpg"
+            alt="Capa do ebook Desperta, Igreja! 40 Dias de Propósito e Missão"
+            width="768"
+            height="1152"
+            loading="lazy"
+          />
+        </figure>
+        <div class="ebook-content">
+          <p class="kicker">Ebook em destaque</p>
+          <h3 class="ebook-title">Desperta, Igreja!</h3>
+          <p class="ebook-subtitle">40 Dias de Propósito e Missão</p>
+          <p class="ebook-description">
+            Um convite para viver a fé com intencionalidade e missão. Acesse a página completa do
+            ebook para conhecer detalhes e garantir seu exemplar.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/ebook/">Acessar Página do Ebook</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <p class="footnote">© 2026 Filipe Ivo Pereira. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
