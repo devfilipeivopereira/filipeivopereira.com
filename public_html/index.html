@@ -25,7 +25,7 @@
     />
     <meta name="twitter:image" content="https://www.filipeivopereira.com/images/8b.png" />
     <link rel="icon" type="image/png" href="/images/8b.png" />
-    <link rel="preload" href="/images/8b.png" as="image" type="image/png" fetchpriority="high" />
+    <link rel="preload" href="/images/filipe-apresentacao.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="preload" href="/ebook/images/book-cover.jpg" as="image" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -246,31 +246,52 @@
       .portrait-wrap {
         position: relative;
         overflow: hidden;
-        padding: 26px;
+        padding: clamp(18px, 2.6vw, 30px) clamp(14px, 2.2vw, 26px) 0;
         isolation: isolate;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: clamp(500px, 58vw, 670px);
+        background:
+          radial-gradient(circle at 68% 22%, rgba(255, 183, 3, 0.24), transparent 47%),
+          linear-gradient(165deg, rgba(255, 255, 255, 0.06) 0%, rgba(9, 16, 18, 0.45) 38%, rgba(9, 16, 18, 0.9) 100%);
       }
 
       .portrait-wrap::before {
         content: "";
         position: absolute;
-        inset: auto -12% -28% -12%;
-        height: 58%;
-        border-radius: 999px;
-        background: linear-gradient(95deg, #ffb703 0%, #fb8500 80%);
-        filter: blur(0.5px);
+        inset: auto -20% -40% -20%;
+        height: 72%;
+        border-radius: 56% 44% 0 0 / 60% 40% 0 0;
+        background: linear-gradient(102deg, rgba(255, 183, 3, 0.9) 0%, rgba(251, 133, 0, 0.86) 70%);
+        filter: blur(1px);
         z-index: 0;
-        opacity: 0.88;
+        opacity: 0.96;
+      }
+
+      .portrait-wrap::after {
+        content: "";
+        position: absolute;
+        width: 74%;
+        aspect-ratio: 1;
+        left: 50%;
+        top: 8%;
+        transform: translateX(-50%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 68%);
+        z-index: 1;
+        pointer-events: none;
       }
 
       .portrait {
         position: relative;
         z-index: 2;
-        width: 100%;
-        max-width: 460px;
+        width: min(100%, 530px);
+        max-width: 530px;
         display: block;
-        margin: 4px auto 0;
+        margin: 0 auto;
         height: auto;
-        transform: translateY(3px);
+        transform: translateY(10px);
+        filter: drop-shadow(0 28px 45px rgba(0, 0, 0, 0.45));
       }
 
       .cards {
@@ -365,8 +386,13 @@
           grid-template-columns: 1fr;
         }
 
+        .portrait-wrap {
+          min-height: clamp(430px, 88vw, 580px);
+        }
+
         .portrait {
-          max-width: 390px;
+          max-width: 420px;
+          transform: translateY(6px);
         }
 
         .card-grid {
@@ -402,7 +428,8 @@
         }
 
         .portrait-wrap {
-          padding: 20px;
+          padding: 18px 12px 0;
+          min-height: 420px;
         }
       }
 
@@ -485,10 +512,10 @@
         <aside class="panel portrait-wrap reveal reveal-2">
           <img
             class="portrait"
-            src="/images/8b.png"
+            src="/images/filipe-apresentacao.webp"
             alt="Retrato de Filipe Ivo Pereira"
-            width="2048"
-            height="2048"
+            width="1600"
+            height="2000"
             fetchpriority="high"
           />
         </aside>
