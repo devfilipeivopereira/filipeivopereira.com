@@ -159,9 +159,7 @@
       }
 
       .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-        gap: 24px;
+        display: block;
       }
 
       .kicker {
@@ -185,17 +183,6 @@
         line-height: 1.75;
         color: var(--muted);
         font-size: 0.97rem;
-      }
-
-      .author-box {
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.03);
-        padding: 18px;
-      }
-
-      .author-box strong {
-        color: #fff;
       }
 
       section {
@@ -322,10 +309,36 @@
         display: grid;
         gap: 16px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        grid-auto-rows: 1fr;
+      }
+
+      .project-card {
+        height: 100%;
       }
 
       .project-card .content {
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) auto;
         gap: 12px;
+      }
+
+      .project-card .content h3 {
+        min-height: 2.8rem;
+      }
+
+      .project-card .content .description {
+        min-height: 7.2rem;
+      }
+
+      .media-project {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .media-project img {
+        display: block;
       }
 
       .cta {
@@ -374,10 +387,6 @@
       }
 
       @media (max-width: 920px) {
-        .hero-grid {
-          grid-template-columns: 1fr;
-        }
-
         .products-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -429,18 +438,6 @@
               crescimento espiritual.
             </p>
           </div>
-
-          <aside class="author-box">
-            <p class="kicker">Sobre o autor</p>
-            <p>
-              Pastor na <strong>Igreja da Família Cristã</strong>, em São José (SC), professor e
-              escritor. Mestre em Administração, com atuação em teologia prática, liderança e
-              formação de pessoas.
-            </p>
-            <a class="btn btn-secondary" href="https://www.filipeivopereira.com" target="_blank" rel="noopener noreferrer">
-              Site oficial do pastor
-            </a>
-          </aside>
         </div>
       </section>
 
@@ -622,7 +619,7 @@
         <div class="projects-grid">
           <article class="project-card">
             <div class="media-project">
-              <img src="./Podcast_Encoraje_seu_dia.png" alt="Podcast Encoraje Seu Dia" loading="lazy" width="1280" height="720" />
+              <img src="./Podcast_Encoraje_seu_dia.png" alt="Podcast Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
             </div>
             <div class="content">
               <h3>Podcast: Encoraje Seu Dia</h3>
@@ -636,7 +633,7 @@
 
           <article class="project-card">
             <div class="media-project">
-              <img src="./atitude_invest.png" alt="Blog Atitude Invest" loading="lazy" width="1280" height="720" />
+              <img src="./atitude_invest.png" alt="Blog Atitude Invest" loading="lazy" width="1920" height="1080" />
             </div>
             <div class="content">
               <h3>Blog Atitude Invest</h3>
@@ -650,7 +647,7 @@
 
           <article class="project-card">
             <div class="media-project">
-              <img src="./youtube.png" alt="Canal no YouTube de Filipe Ivo Pereira" loading="lazy" width="1280" height="720" />
+              <img src="./youtube.png" alt="Canal no YouTube de Filipe Ivo Pereira" loading="lazy" width="1920" height="1080" />
             </div>
             <div class="content">
               <h3>Canal no YouTube</h3>
