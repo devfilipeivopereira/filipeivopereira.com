@@ -320,107 +320,100 @@
         align-items: start;
       }
 
-      .encorajar-section {
+      .encorajar-highlight {
+        position: relative;
+        overflow: hidden;
         margin-top: 22px;
-        padding: clamp(20px, 2.4vw, 30px);
+        padding: clamp(24px, 3vw, 36px);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 183, 3, 0.38);
+        background:
+          radial-gradient(circle at 12% 16%, rgba(255, 183, 3, 0.22), transparent 42%),
+          radial-gradient(circle at 88% 8%, rgba(251, 133, 0, 0.22), transparent 34%),
+          linear-gradient(138deg, rgba(7, 15, 18, 0.96), rgba(10, 26, 30, 0.95));
+        box-shadow:
+          0 24px 45px rgba(0, 0, 0, 0.4),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      }
+
+      .encorajar-highlight::after {
+        content: "";
+        position: absolute;
+        inset: auto -8% -70% -8%;
+        height: 220px;
+        background: linear-gradient(90deg, rgba(255, 183, 3, 0.35), rgba(251, 133, 0, 0.32));
+        filter: blur(60px);
+        pointer-events: none;
+      }
+
+      .encorajar-head {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .encorajar-badge {
+        width: 62px;
+        height: 62px;
+        object-fit: contain;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.22);
+        padding: 5px;
       }
 
       .encorajar-title {
         margin: 0;
         font-family: "Bebas Neue", sans-serif;
-        letter-spacing: 0.06em;
-        font-size: clamp(1.8rem, 2vw, 2.4rem);
-      }
-
-      .encorajar-brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .encorajar-logo {
-        width: 58px;
-        height: 58px;
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.06);
-        object-fit: contain;
-        padding: 4px;
-      }
-
-      .encorajar-brand small {
-        display: block;
-        margin-top: 2px;
-        color: var(--muted);
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        font-size: clamp(1.9rem, 2.7vw, 2.8rem);
       }
 
       .encorajar-subtitle {
-        margin: 6px 0 0;
-        color: var(--muted);
-        font-size: 0.92rem;
-        line-height: 1.7;
-        max-width: 68ch;
+        margin: 2px 0 0;
+        text-transform: uppercase;
+        letter-spacing: 0.17em;
+        font-size: 0.72rem;
+        color: #ffd77a;
       }
 
-      .encorajar-grid {
+      .encorajar-copy {
+        position: relative;
+        z-index: 1;
+        margin: 14px 0 0;
+        max-width: 72ch;
+        color: #dce4ea;
+        line-height: 1.78;
+        font-size: 0.95rem;
+      }
+
+      .encorajar-points {
+        position: relative;
+        z-index: 1;
         margin-top: 14px;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .encorajar-stats {
-        margin-top: 12px;
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .encorajar-stat {
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 7px 12px;
-        background: rgba(255, 255, 255, 0.03);
-        font-size: 0.78rem;
-        color: #e8ecef;
-        letter-spacing: 0.05em;
-      }
-
-      .encorajar-item {
-        display: block;
-        padding: 12px 14px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.02);
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .encorajar-item strong {
-        display: block;
-        font-size: 0.92rem;
-      }
-
-      .encorajar-item span {
-        display: block;
-        margin-top: 4px;
-        color: var(--muted);
+      .encorajar-point {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.22);
+        padding: 12px 12px;
         font-size: 0.82rem;
         line-height: 1.55;
       }
 
-      .encorajar-item:hover {
-        border-color: rgba(255, 183, 3, 0.7);
-      }
-
-      .encorajar-cta {
-        margin-top: 14px;
+      .encorajar-actions {
+        position: relative;
+        z-index: 1;
+        margin-top: 16px;
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
       }
 
       .social-section {
@@ -570,7 +563,7 @@
           grid-template-columns: 1fr;
         }
 
-        .encorajar-grid {
+        .encorajar-points {
           grid-template-columns: 1fr;
         }
 
@@ -586,6 +579,10 @@
 
         .social-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .encorajar-actions .btn {
+          width: 100%;
         }
       }
 
@@ -755,61 +752,37 @@
         </div>
       </section>
 
-      <section class="panel encorajar-section reveal reveal-3">
-        <p class="kicker">Capacitação Ministerial</p>
-        <div class="encorajar-brand">
+      <section class="encorajar-highlight reveal reveal-3">
+        <div class="encorajar-head">
           <img
-            class="encorajar-logo"
+            class="encorajar-badge"
             src="/images/encorajar-logo-claro.png"
-            alt="Logotipo ENCORAJAR Capacitação Ministerial"
+            alt="Logotipo ENCORAJAR"
             width="160"
             height="160"
             loading="lazy"
           />
           <div>
-            <h3 class="encorajar-title">Conheça o ENCORAJAR</h3>
-            <small>Capacitação Ministerial</small>
+            <h3 class="encorajar-title">ENCORAJAR</h3>
+            <p class="encorajar-subtitle">Capacitação Ministerial</p>
           </div>
         </div>
-        <p class="encorajar-subtitle">
-          Desenvolvendo líderes e fortalecendo ministérios através de consultoria especializada,
-          recursos práticos e treinamentos transformadores para o crescimento do Reino.
+
+        <p class="encorajar-copy">
+          A plataforma ENCORAJAR foi desenvolvida para fortalecer líderes e ministérios com direção
+          prática, profundidade bíblica e ferramentas de aplicação real no dia a dia.
         </p>
-        <div class="encorajar-stats">
-          <span class="encorajar-stat">10+ anos fortalecendo líderes</span>
-          <span class="encorajar-stat">500+ pessoas capacitadas</span>
-          <span class="encorajar-stat">100+ igrejas alcançadas</span>
+
+        <div class="encorajar-points">
+          <div class="encorajar-point">Testes e avaliações com leitura prática para autoconhecimento e liderança.</div>
+          <div class="encorajar-point">Recursos organizados para estudo, discipulado, formação e implementação.</div>
+          <div class="encorajar-point">Treinamentos e produtos para acelerar o crescimento saudável de equipes.</div>
         </div>
 
-        <div class="encorajar-grid">
-          <a class="encorajar-item" href="https://www.encorajar.com.br/testes" target="_blank" rel="noopener noreferrer">
-            <strong>Testes e Avaliações</strong>
-            <span>8 avaliações validadas para autoconhecimento, liderança e crescimento espiritual.</span>
-          </a>
-          <a class="encorajar-item" href="https://www.encorajar.com.br/recursos" target="_blank" rel="noopener noreferrer">
-            <strong>Recursos Práticos</strong>
-            <span>Materiais de estudo e referências para aplicação pastoral, relacional e organizacional.</span>
-          </a>
-          <a class="encorajar-item" href="https://www.encorajar.com.br/produtos" target="_blank" rel="noopener noreferrer">
-            <strong>Produtos</strong>
-            <span>Livros e conteúdos para desenvolvimento ministerial com foco em implementação.</span>
-          </a>
-          <a class="encorajar-item" href="https://www.encorajar.com.br/treinamentos" target="_blank" rel="noopener noreferrer">
-            <strong>Treinamentos</strong>
-            <span>Capacitações práticas e intensivas para líderes e equipes ministeriais.</span>
-          </a>
-        </div>
-
-        <div class="encorajar-cta">
-          <a class="btn btn-primary" href="https://www.encorajar.com.br/" target="_blank" rel="noopener noreferrer">
-            Acessar ENCORAJAR
-          </a>
-          <a class="btn btn-secondary" href="https://www.encorajar.com.br/testes" target="_blank" rel="noopener noreferrer">
-            Ver Testes
-          </a>
-          <a class="btn btn-secondary" href="https://wa.me/5548999215120" target="_blank" rel="noopener noreferrer">
-            Falar com a equipe
-          </a>
+        <div class="encorajar-actions">
+          <a class="btn btn-primary" href="https://www.encorajar.com.br/" target="_blank" rel="noopener noreferrer">Acessar ENCORAJAR</a>
+          <a class="btn btn-secondary" href="https://www.encorajar.com.br/testes" target="_blank" rel="noopener noreferrer">Ver Testes</a>
+          <a class="btn btn-secondary" href="https://www.encorajar.com.br/recursos" target="_blank" rel="noopener noreferrer">Ver Recursos</a>
         </div>
       </section>
 
