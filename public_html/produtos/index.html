@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos | Filipe Ivo Pereira</title>
+    <meta
+      name="description"
+      content="Livros, ebooks e projetos digitais do Pr. Filipe Ivo Pereira: fé prática, devocionais, liderança e finanças cristãs."
+    />
+    <meta name="author" content="Filipe Ivo Pereira" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Produtos | Filipe Ivo Pereira" />
+    <meta
+      property="og:description"
+      content="Conheça os livros, ebooks e conteúdos digitais do Pr. Filipe Ivo Pereira."
+    />
+    <meta property="og:url" content="https://www.filipeivopereira.com/produtos" />
+    <meta property="og:image" content="https://www.filipeivopereira.com/produtos/Livro_Face_a_Face_com_Jesus.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Produtos | Filipe Ivo Pereira" />
+    <meta
+      name="twitter:description"
+      content="Conheça os livros, ebooks e conteúdos digitais do Pr. Filipe Ivo Pereira."
+    />
+    <meta name="twitter:image" content="https://www.filipeivopereira.com/produtos/Livro_Face_a_Face_com_Jesus.png" />
+    <link rel="icon" type="image/png" href="/images/8b.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070909;
+        --bg-soft: #10191b;
+        --text: #f4f4f4;
+        --muted: #bdc7c7;
+        --line: rgba(255, 255, 255, 0.14);
+        --card: rgba(9, 16, 18, 0.82);
+        --accent: #ffb703;
+        --accent-deep: #fb8500;
+        --radius-lg: 28px;
+        --radius-md: 18px;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: "Sora", sans-serif;
+        background:
+          radial-gradient(circle at 12% 10%, rgba(255, 183, 3, 0.16), transparent 38%),
+          radial-gradient(circle at 90% 0%, rgba(251, 133, 0, 0.18), transparent 32%),
+          linear-gradient(150deg, #040505 0%, #0b1315 55%, #060707 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.8px, transparent 0.8px);
+        background-size: 3px 3px;
+        opacity: 0.08;
+        pointer-events: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        padding: 28px 0 10px;
+      }
+
+      .brand-row {
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 1.4vw + 1.5rem, 2.6rem);
+        letter-spacing: 0.08em;
+      }
+
+      .topline {
+        display: inline-flex;
+        margin-top: 6px;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 2px;
+      }
+
+      .btn-primary {
+        padding: 12px 18px;
+        border: none;
+        color: #0f1112;
+        background: linear-gradient(115deg, var(--accent), var(--accent-deep));
+        box-shadow: 0 10px 24px rgba(255, 183, 3, 0.28);
+      }
+
+      .btn-secondary {
+        padding: 11px 18px;
+        border: 1px solid var(--line);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      main {
+        padding: 10px 0 56px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(8px);
+      }
+
+      .hero {
+        padding: clamp(24px, 3vw, 40px);
+        margin-bottom: 28px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+        gap: 24px;
+      }
+
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        margin: 10px 0 0;
+        line-height: 1.08;
+        letter-spacing: 0.01em;
+        font-size: clamp(2rem, 3.1vw, 3.2rem);
+      }
+
+      .hero p {
+        margin: 14px 0 0;
+        line-height: 1.75;
+        color: var(--muted);
+        font-size: 0.97rem;
+      }
+
+      .author-box {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 18px;
+      }
+
+      .author-box strong {
+        color: #fff;
+      }
+
+      section {
+        margin-top: 24px;
+      }
+
+      .section-head {
+        margin-bottom: 16px;
+      }
+
+      .section-head h2 {
+        margin: 8px 0 0;
+        font-size: clamp(1.7rem, 2.1vw, 2.4rem);
+        line-height: 1.15;
+      }
+
+      .products-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .product-card,
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        overflow: hidden;
+        border: 2px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.02);
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28);
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .product-card:hover,
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.34);
+      }
+
+      .media-book {
+        aspect-ratio: 3 / 4;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.22));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .media-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 12px;
+      }
+
+      .media-project {
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.22));
+      }
+
+      .media-project img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-self: flex-start;
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .badge-indigo { background: rgba(129, 140, 248, 0.25); color: #c7d2fe; }
+      .badge-blue { background: rgba(96, 165, 250, 0.24); color: #bfdbfe; }
+      .badge-orange { background: rgba(251, 146, 60, 0.24); color: #fed7aa; }
+      .badge-yellow { background: rgba(250, 204, 21, 0.23); color: #fef08a; }
+      .badge-red { background: rgba(248, 113, 113, 0.22); color: #fecaca; }
+      .badge-emerald { background: rgba(16, 185, 129, 0.22); color: #a7f3d0; }
+      .badge-cyan { background: rgba(34, 211, 238, 0.21); color: #a5f3fc; }
+      .badge-rose { background: rgba(251, 113, 133, 0.22); color: #fecdd3; }
+
+      .content h3 {
+        margin: 0;
+        font-size: 1.07rem;
+        line-height: 1.3;
+      }
+
+      .subtitle {
+        margin: 2px 0 0;
+        color: #d4dbe0;
+        font-size: 0.76rem;
+      }
+
+      .description {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.65;
+        flex: 1;
+      }
+
+      .actions {
+        margin-top: auto;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 8px;
+      }
+
+      .projects-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .project-card .content {
+        gap: 12px;
+      }
+
+      .cta {
+        margin-top: 28px;
+        padding: clamp(24px, 3vw, 38px);
+        text-align: center;
+      }
+
+      .cta h2 {
+        margin: 0;
+        font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+      }
+
+      .cta p {
+        margin: 12px auto 0;
+        max-width: 60ch;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .cta-actions {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      footer {
+        padding: 22px 0 32px;
+      }
+
+      .footnote {
+        margin: 0;
+        color: #afafaf;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      @media (max-width: 1120px) {
+        .products-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .products-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(1180px, calc(100% - 20px));
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .brand-row {
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container site-header">
+      <div class="brand-row">
+        <div>
+          <h1 class="brand">Filipe Ivo Pereira</h1>
+          <div class="topline">Produtos Oficiais</div>
+        </div>
+        <a class="btn btn-secondary" href="/">Voltar para o início</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel hero">
+        <div class="hero-grid">
+          <div>
+            <p class="kicker">Pr. Filipe Ivo Pereira</p>
+            <h1>Recursos que transformam vidas e formam líderes.</h1>
+            <p>
+              Livros e conteúdos com foco em fé prática, finanças, devocionais e transformação de
+              vidas pela Palavra. Materiais para estudo pessoal, discipulado, liderança e
+              crescimento espiritual.
+            </p>
+          </div>
+
+          <aside class="author-box">
+            <p class="kicker">Sobre o autor</p>
+            <p>
+              Pastor na <strong>Igreja da Família Cristã</strong>, em São José (SC), professor e
+              escritor. Mestre em Administração, com atuação em teologia prática, liderança e
+              formação de pessoas.
+            </p>
+            <a class="btn btn-secondary" href="https://www.filipeivopereira.com" target="_blank" rel="noopener noreferrer">
+              Site oficial do pastor
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <p class="kicker">Publicações</p>
+          <h2>Livros e Ebooks</h2>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_Face_a_Face_com_Jesus.png" alt="Capa do livro Face a Face com Jesus" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-indigo">Liderança e Discipulado</span>
+              <div>
+                <h3>Face a Face com Jesus</h3>
+                <p class="subtitle">Os Encontros Mais Poderosos do Novo Testamento</p>
+              </div>
+              <p class="description">
+                Uma jornada pelos encontros mais transformadores de Jesus no Novo Testamento. Ideal
+                para líderes de grupos e células que buscam recomeços espirituais profundos.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://clubedeautores.com.br/livro/face-a-face-com-jesus" target="_blank" rel="noopener noreferrer">Comprar - R$ 45,59</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_A_fe_remova_montanhas.png" alt="Capa do livro A Fé Remove Montanhas" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-blue">Devocional</span>
+              <div>
+                <h3>A Fé Remove Montanhas</h3>
+                <p class="subtitle">31 Dias Devocionais</p>
+              </div>
+              <p class="description">
+                Guia devocional de 31 dias explorando o poder transformador da fé, com lições
+                bíblicas e orações diárias para fortalecer sua caminhada espiritual.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.amazon.com.br/Remove-Montanhas-Filipe-Ivo-Pereira/dp/6500606515/" target="_blank" rel="noopener noreferrer">Comprar - R$ 44,90</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_Desperta_igreja.png" alt="Capa do livro Desperta, Igreja" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-orange">Missão · COBIM</span>
+              <div>
+                <h3>Desperta, Igreja!</h3>
+                <p class="subtitle">40 Dias de Missão e Propósito</p>
+              </div>
+              <p class="description">
+                Uma convocação de 40 dias para a igreja viver seu chamado missionário, com foco em
+                propósito, discipulado e ação prática no Reino de Deus.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.menonpress.com.br/foxxgm3fo-comecar-de-novo-marcas-de-uma-fe-singular" target="_blank" rel="noopener noreferrer">Comprar - R$ 48,00</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_Desendivide_se.png" alt="Capa do livro Desendivide-se" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-yellow">Finanças Cristãs</span>
+              <div>
+                <h3>Desendivide-se</h3>
+                <p class="subtitle">Você Também Pode Ficar Livre das Dívidas</p>
+              </div>
+              <p class="description">
+                Um guia prático e motivador para sair das dívidas com sabedoria e princípios
+                bíblicos, reconstruindo a vida financeira com propósito e fé.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://clubedeautores.com.br/livro/desendivide-se" target="_blank" rel="noopener noreferrer">Comprar - R$ 43,44</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_Encoraje_seu_dia.png" alt="Capa do livro Encoraje Seu Dia" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-red">Devocional Anual</span>
+              <div>
+                <h3>Encoraje Seu Dia</h3>
+                <p class="subtitle">365 Doses de Ânimo</p>
+              </div>
+              <p class="description">
+                Uma dose diária de encorajamento para cada dia do ano, com versículos, reflexões e
+                orações que renovam forças e direcionam sua manhã.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.amazon.com.br/Clube-Autores-Livro-Encoraje-Seu/dp/6560366340/" target="_blank" rel="noopener noreferrer">Comprar - R$ 53,95</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_O_Poder_da_Consitencia.jpg" alt="Capa do ebook O Poder da Consistência" loading="lazy" width="1070" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-emerald">Ebook</span>
+              <div>
+                <h3>O Poder da Consistência</h3>
+                <p class="subtitle">Alcançando seu Potencial Máximo</p>
+              </div>
+              <p class="description">
+                Aprenda como a constância e os pequenos hábitos diários podem transformar sua vida,
+                ajudar a alcançar metas audaciosas e revelar seu verdadeiro potencial.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.amazon.com.br" target="_blank" rel="noopener noreferrer">Comprar ebook - R$ 9,99</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_a_igreja_que_o_mundo_precisa.jpg" alt="Capa do ebook A Igreja que o Mundo Precisa" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-cyan">Ebook</span>
+              <div>
+                <h3>A Igreja que o Mundo Precisa</h3>
+                <p class="subtitle">E Jesus Planejou</p>
+              </div>
+              <p class="description">
+                Reflexão sobre o papel da igreja à luz dos planos originais de Jesus e como viver
+                esse chamado com relevância no contexto atual.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.amazon.com.br/Igreja-que-Mundo-Precisa-Planejou-ebook/dp/B0BYBBJ69H" target="_blank" rel="noopener noreferrer">Comprar ebook - R$ 4,99</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="media-book">
+              <img src="./Livro_Esperanca_Inabalavel.jpg" alt="Capa do ebook Esperança Inabalável" loading="lazy" width="1067" height="1600" />
+            </div>
+            <div class="content">
+              <span class="badge badge-rose">Ebook</span>
+              <div>
+                <h3>Esperança Inabalável</h3>
+                <p class="subtitle">Vencendo as Fases de Tempestades</p>
+              </div>
+              <p class="description">
+                Mensagens de fé e encorajamento para vencer fases de tempestades e crises pessoais,
+                fortalecendo o coração nos momentos mais desafiadores.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="https://www.amazon.com.br/Esperan%C3%A7a-Inabal%C3%A1vel-Vencendo-Fases-Tempestades-ebook/dp/B0BY6M7L3W" target="_blank" rel="noopener noreferrer">Comprar ebook - R$ 4,99</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <p class="kicker">Projetos Digitais</p>
+          <h2>Conteúdo Adicional</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="media-project">
+              <img src="./Podcast_Encoraje_seu_dia.png" alt="Podcast Encoraje Seu Dia" loading="lazy" width="1280" height="720" />
+            </div>
+            <div class="content">
+              <h3>Podcast: Encoraje Seu Dia</h3>
+              <p class="description">
+                Devocionais diários em áudio para encorajamento e fé prática. Comece sua manhã com
+                a Palavra.
+              </p>
+              <a class="btn btn-secondary" href="https://open.spotify.com/show/3pqR4I4E8bRlxBKCQsgHRe" target="_blank" rel="noopener noreferrer">Ouvir no Spotify</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="media-project">
+              <img src="./atitude_invest.png" alt="Blog Atitude Invest" loading="lazy" width="1280" height="720" />
+            </div>
+            <div class="content">
+              <h3>Blog Atitude Invest</h3>
+              <p class="description">
+                Aprenda sobre finanças, investimentos, economia e negócios sob uma perspectiva
+                inteligente e responsável.
+              </p>
+              <a class="btn btn-secondary" href="https://atitudeinvest.com/" target="_blank" rel="noopener noreferrer">Acessar o blog</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="media-project">
+              <img src="./youtube.png" alt="Canal no YouTube de Filipe Ivo Pereira" loading="lazy" width="1280" height="720" />
+            </div>
+            <div class="content">
+              <h3>Canal no YouTube</h3>
+              <p class="description">
+                Pregações, ensinos e mensagens que encorajam. Uma biblioteca gratuita de conteúdo
+                bíblico e prático.
+              </p>
+              <a class="btn btn-secondary" href="https://www.youtube.com/@filipeivopereira" target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel cta">
+        <h2>Quer conversar sobre palestras ou treinamentos?</h2>
+        <p>
+          Filipe Ivo Pereira está disponível para palestras, workshops e treinamentos de liderança
+          para igrejas, empresas e organizações.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/5548999215120" target="_blank" rel="noopener noreferrer">Entrar em contato</a>
+          <a class="btn btn-secondary" href="/">Voltar para o início</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <p class="footnote">© 2026 Filipe Ivo Pereira. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

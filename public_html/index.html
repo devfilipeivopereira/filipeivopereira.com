@@ -320,6 +320,109 @@
         align-items: start;
       }
 
+      .encorajar-section {
+        margin-top: 22px;
+        padding: clamp(20px, 2.4vw, 30px);
+      }
+
+      .encorajar-title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.06em;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+      }
+
+      .encorajar-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .encorajar-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.06);
+        object-fit: contain;
+        padding: 4px;
+      }
+
+      .encorajar-brand small {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+      }
+
+      .encorajar-subtitle {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.7;
+        max-width: 68ch;
+      }
+
+      .encorajar-grid {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .encorajar-stats {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .encorajar-stat {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 0.78rem;
+        color: #e8ecef;
+        letter-spacing: 0.05em;
+      }
+
+      .encorajar-item {
+        display: block;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .encorajar-item strong {
+        display: block;
+        font-size: 0.92rem;
+      }
+
+      .encorajar-item span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.55;
+      }
+
+      .encorajar-item:hover {
+        border-color: rgba(255, 183, 3, 0.7);
+      }
+
+      .encorajar-cta {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
       .link-card {
         display: block;
         text-decoration: none;
@@ -329,6 +432,7 @@
         background: rgba(255, 255, 255, 0.02);
         transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
         min-width: 0;
+        aspect-ratio: 16 / 9;
       }
 
       .link-card:hover {
@@ -339,13 +443,12 @@
 
       .link-card img {
         width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        object-fit: contain;
+        height: 100%;
+        object-fit: cover;
         object-position: center;
         display: block;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15));
-        padding: 5px;
+        padding: 0;
       }
 
       footer {
@@ -404,11 +507,15 @@
         .card-grid {
           grid-template-columns: 1fr;
         }
+
+        .encorajar-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 640px) {
         .link-card img {
-          padding: 4px;
+          padding: 0;
         }
       }
 
@@ -510,6 +617,12 @@
           </details>
           <div class="cta-row">
             <a
+              class="btn btn-primary"
+              href="/produtos/"
+            >
+              Ver Produtos
+            </a>
+            <a
               class="btn btn-secondary"
               href="https://wa.me/5548999215120?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20ebook."
               target="_blank"
@@ -540,7 +653,7 @@
         </p>
         <div class="card-grid">
           <a class="link-card" href="https://atitudeinvest.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/3.png" alt="Card Atitude Invest" loading="lazy" width="1920" height="1080" />
+            <img src="/images/atitude_invest.png" alt="Card Atitude Invest" loading="lazy" width="1920" height="1080" />
           </a>
 
           <a class="link-card" href="/ebook/">
@@ -564,11 +677,69 @@
           </a>
 
           <a class="link-card" href="https://open.spotify.com/show/3pqR4I4E8bRlxBKCQsgHRe?si=396976242c534152" target="_blank" rel="noopener noreferrer">
-            <img src="/images/2.png" alt="Card Spotify Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
+            <img src="/images/Podcast_Encoraje_seu_dia.png" alt="Card Spotify Encoraje Seu Dia" loading="lazy" width="1920" height="1080" />
           </a>
 
           <a class="link-card" href="https://www.youtube.com/playlist?list=PL8TZC9PmmYq5_4UGM_guQm-SSXHFNwLfj" target="_blank" rel="noopener noreferrer">
-            <img src="/images/1.png" alt="Card YouTube Mensagens que Encorajam e Transformam" loading="lazy" width="1920" height="1080" />
+            <img src="/images/youtube.png" alt="Card YouTube Mensagens que Encorajam e Transformam" loading="lazy" width="1920" height="1080" />
+          </a>
+        </div>
+      </section>
+
+      <section class="panel encorajar-section reveal reveal-3">
+        <p class="kicker">Capacitação Ministerial</p>
+        <div class="encorajar-brand">
+          <img
+            class="encorajar-logo"
+            src="/images/encorajar-logo-claro.png"
+            alt="Logotipo ENCORAJAR Capacitação Ministerial"
+            width="160"
+            height="160"
+            loading="lazy"
+          />
+          <div>
+            <h3 class="encorajar-title">Conheça o ENCORAJAR</h3>
+            <small>Capacitação Ministerial</small>
+          </div>
+        </div>
+        <p class="encorajar-subtitle">
+          Desenvolvendo líderes e fortalecendo ministérios através de consultoria especializada,
+          recursos práticos e treinamentos transformadores para o crescimento do Reino.
+        </p>
+        <div class="encorajar-stats">
+          <span class="encorajar-stat">10+ anos fortalecendo líderes</span>
+          <span class="encorajar-stat">500+ pessoas capacitadas</span>
+          <span class="encorajar-stat">100+ igrejas alcançadas</span>
+        </div>
+
+        <div class="encorajar-grid">
+          <a class="encorajar-item" href="https://www.encorajar.com.br/testes" target="_blank" rel="noopener noreferrer">
+            <strong>Testes e Avaliações</strong>
+            <span>8 avaliações validadas para autoconhecimento, liderança e crescimento espiritual.</span>
+          </a>
+          <a class="encorajar-item" href="https://www.encorajar.com.br/recursos" target="_blank" rel="noopener noreferrer">
+            <strong>Recursos Práticos</strong>
+            <span>Materiais de estudo e referências para aplicação pastoral, relacional e organizacional.</span>
+          </a>
+          <a class="encorajar-item" href="https://www.encorajar.com.br/produtos" target="_blank" rel="noopener noreferrer">
+            <strong>Produtos</strong>
+            <span>Livros e conteúdos para desenvolvimento ministerial com foco em implementação.</span>
+          </a>
+          <a class="encorajar-item" href="https://www.encorajar.com.br/treinamentos" target="_blank" rel="noopener noreferrer">
+            <strong>Treinamentos</strong>
+            <span>Capacitações práticas e intensivas para líderes e equipes ministeriais.</span>
+          </a>
+        </div>
+
+        <div class="encorajar-cta">
+          <a class="btn btn-primary" href="https://www.encorajar.com.br/" target="_blank" rel="noopener noreferrer">
+            Acessar ENCORAJAR
+          </a>
+          <a class="btn btn-secondary" href="https://www.encorajar.com.br/testes" target="_blank" rel="noopener noreferrer">
+            Ver Testes
+          </a>
+          <a class="btn btn-secondary" href="https://wa.me/5548999215120" target="_blank" rel="noopener noreferrer">
+            Falar com a equipe
           </a>
         </div>
       </section>
