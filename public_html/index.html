@@ -423,6 +423,60 @@
         gap: 12px;
       }
 
+      .social-section {
+        margin-top: 22px;
+        padding: clamp(20px, 2.4vw, 30px);
+      }
+
+      .social-title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.06em;
+        font-size: clamp(1.7rem, 1.9vw, 2.2rem);
+      }
+
+      .social-subtitle {
+        margin: 6px 0 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 66px;
+        padding: 10px 8px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+      }
+
+      .social-link img {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+      }
+
+      .social-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 183, 3, 0.7);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
       .link-card {
         display: block;
         text-decoration: none;
@@ -511,11 +565,19 @@
         .encorajar-grid {
           grid-template-columns: 1fr;
         }
+
+        .social-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
       }
 
       @media (max-width: 640px) {
         .link-card img {
           padding: 0;
+        }
+
+        .social-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -740,6 +802,38 @@
           </a>
           <a class="btn btn-secondary" href="https://wa.me/5548999215120" target="_blank" rel="noopener noreferrer">
             Falar com a equipe
+          </a>
+        </div>
+      </section>
+
+      <section class="panel social-section reveal reveal-3">
+        <p class="kicker">Conecte-se</p>
+        <h3 class="social-title">Redes Sociais</h3>
+        <p class="social-subtitle">Clique nos logotipos para acessar cada canal oficial.</p>
+        <div class="social-grid">
+          <a class="social-link" href="https://www.instagram.com/filipeivopereira/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/instagram/FFFFFF" alt="Instagram" loading="lazy" width="20" height="20" />
+            Instagram
+          </a>
+          <a class="social-link" href="https://x.com/prfilipeivo" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/x/FFFFFF" alt="X" loading="lazy" width="20" height="20" />
+            X
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/filipe-ivo-pereira-8033a146/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/linkedin/FFFFFF" alt="LinkedIn" loading="lazy" width="20" height="20" />
+            LinkedIn
+          </a>
+          <a class="social-link" href="https://www.facebook.com/profile.php?id=100022757755889&locale=pt_BR" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="Facebook" loading="lazy" width="20" height="20" />
+            Facebook
+          </a>
+          <a class="social-link" href="https://vm.tiktok.com/ZS9Fhe2gxE9Py-uOsJ5/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="TikTok" loading="lazy" width="20" height="20" />
+            TikTok
+          </a>
+          <a class="social-link" href="https://www.youtube.com/watch?v=hCt39ICCFvI&list=PL8TZC9PmmYq5_4UGM_guQm-SSXHFNwLfj" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/youtube/FFFFFF" alt="YouTube" loading="lazy" width="20" height="20" />
+            YouTube
           </a>
         </div>
       </section>
