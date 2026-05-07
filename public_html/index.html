@@ -247,12 +247,12 @@
       .portrait-wrap {
         position: relative;
         overflow: hidden;
-        padding: clamp(8px, 1.7vw, 16px) clamp(8px, 1.4vw, 16px) 0;
+        padding: clamp(8px, 1.7vw, 16px) clamp(8px, 1.4vw, 16px) 8px;
         isolation: isolate;
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        min-height: clamp(500px, 58vw, 670px);
+        min-height: clamp(470px, 56vw, 630px);
         background:
           radial-gradient(circle at 68% 22%, rgba(255, 183, 3, 0.24), transparent 47%),
           linear-gradient(165deg, rgba(255, 255, 255, 0.06) 0%, rgba(9, 16, 18, 0.45) 38%, rgba(9, 16, 18, 0.9) 100%);
@@ -291,7 +291,7 @@
         display: block;
         margin: 0 auto;
         height: auto;
-        transform: translateY(-42px);
+        transform: translateY(-30px);
         filter: drop-shadow(0 28px 45px rgba(0, 0, 0, 0.45));
       }
 
@@ -388,12 +388,12 @@
         }
 
         .portrait-wrap {
-          min-height: clamp(430px, 88vw, 580px);
+          min-height: clamp(400px, 84vw, 540px);
         }
 
         .portrait {
           max-width: 420px;
-          transform: translateY(-34px);
+          transform: translateY(-18px);
         }
 
         .card-grid {
@@ -429,12 +429,13 @@
         }
 
         .portrait-wrap {
-          padding: 10px 8px 0;
-          min-height: 420px;
+          padding: 10px 8px 8px;
+          min-height: 380px;
         }
 
         .portrait {
-          transform: translateY(-24px);
+          max-width: 360px;
+          transform: translateY(-8px);
         }
       }
 
